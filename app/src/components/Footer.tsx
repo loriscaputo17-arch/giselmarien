@@ -1,6 +1,30 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { supabase } from "@/app/src/lib/supabase";
 
 export default function Footer() {
+  const [phone, setPhone] = useState("");
+
+  const submitPhone = async () => {
+    if (!phone) return;
+
+   
+
+    const { error } = await supabase
+      .from("phone_gate")
+      .insert([{ phone }]);
+
+    
+
+    if (error) {
+      console.error(error);
+      alert("Errore durante l'invio. Riprova.");
+      return;
+    }
+  };
+
   return (
     <footer className="bg-[#343026] text-[#e4e2dd] rounded-xl">
       <div className="max-w-7xl mx-auto px-6 py-32">
@@ -31,12 +55,13 @@ export default function Footer() {
 
             <form className="flex gap-2">
               <input
-                type="email"
-                placeholder="La tua email"
+                type="text"
+                placeholder="Numero cellulare"
                 className="flex-1 rounded-full px-5 py-3 text-sm text-[#343026] bg-[#e4e2dd] focus:outline-none"
               />
               <button
                 type="submit"
+                onClick={submitPhone}
                 className="rounded-full px-6 py-3 text-xs uppercase tracking-[0.18em] bg-[#e4e2dd] text-[#343026] hover:opacity-90 transition"
               >
                 Iscriviti
@@ -54,8 +79,6 @@ export default function Footer() {
               </p>
               <ul className="space-y-2 text-sm opacity-90">
                 <li><Link href="/approach">Manifesto</Link></li>
-                <li><Link href="/projects">Progetti</Link></li>
-                <li><Link href="/collaborations">Collaborazioni</Link></li>
                 <li><Link href="/contact">Contatti</Link></li>
               </ul>
             </div>

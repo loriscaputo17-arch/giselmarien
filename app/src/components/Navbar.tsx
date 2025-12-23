@@ -27,7 +27,6 @@ export default function Navbar() {
           {/* LEFT – desktop menu */}
           <div className="hidden md:flex font-bold items-center gap-6 text-xs uppercase tracking-[0.18em]">
             <Link href="/approach">Manifesto</Link>
-            <Link href="/projects">Progetti</Link>
           </div>
 
           {/* MOBILE LOGO */}
@@ -49,7 +48,6 @@ export default function Navbar() {
 
           {/* RIGHT – desktop menu */}
           <div className="hidden md:flex font-bold items-center gap-6 text-xs uppercase tracking-[0.18em]">
-            <Link href="/collaborations">Collaborazioni</Link>
             <Link href="/contact">Contatti</Link>
           </div>
 

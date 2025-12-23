@@ -1,15 +1,36 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { supabase } from "@/app/src/lib/supabase";
 
 export default function PhoneGate() {
   const [open, setOpen] = useState(false);
   const [phone, setPhone] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    // mostra il popup all'ingresso
     setOpen(true);
   }, []);
+
+  const submitPhone = async () => {
+    if (!phone) return;
+
+    setLoading(true);
+
+    const { error } = await supabase
+      .from("phone_gate")
+      .insert([{ phone }]);
+
+    setLoading(false);
+
+    if (error) {
+      console.error(error);
+      alert("Errore durante l'invio. Riprova.");
+      return;
+    }
+
+    setOpen(false);
+  };
 
   if (!open) return null;
 
@@ -20,9 +41,13 @@ export default function PhoneGate() {
       <div className="absolute inset-0 bg-sand-50/80 backdrop-blur-md" />
 
       {/* MODAL */}
-      <div className="relative z-10 max-w-md w-full mx-6 bg-[#e4e2dd] rounded-[32px] p-10 text-center shadow-[0_20px_60px_rgba(0,0,0,0.08)] space-y-4">
+      <div className="relative z-10 max-w-md w-full mx-6 bg-[#e4e2dd] rounded-[32px] p-10 text-center shadow-[0_20px_60px_rgba(0,0,0,0.08)] space-y-5">
 
-        <img src="logotext.png" style={{width: '15vw'}} className="ml-auto mr-auto"/>
+        <img
+          src="/logotext.png"
+          alt="Gisel Marén"
+          className="mx-auto w-[160px]"
+        />
 
         <p className="text-[10px] uppercase tracking-[0.22em] text-ink-500">
           Contatto diretto
@@ -45,17 +70,15 @@ export default function PhoneGate() {
           placeholder="Numero di telefono"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
-          className="w-full rounded-full  px-6 py-4 bg-white focus:outline-none focus:ring-1 focus:ring-sand-400"
+          className="w-full rounded-full px-6 py-4 bg-white focus:outline-none focus:ring-1 focus:ring-sand-400"
         />
 
         <button
-          className="w-full rounded-full bg-[#343026] text-[#e4e2dd] px-6 py-4 text-xs uppercase tracking-[0.18em] hover:opacity-90 transition cursor-pointer"
-          onClick={() => {
-            // qui in futuro mandi il numero al backend / WhatsApp
-            setOpen(false);
-          }}
+          disabled={loading}
+          onClick={submitPhone}
+          className="w-full rounded-full bg-[#343026] text-[#e4e2dd] px-6 py-4 text-xs uppercase tracking-[0.18em] hover:opacity-90 transition cursor-pointer disabled:opacity-50"
         >
-          Lascia il numero
+          {loading ? "Invio..." : "Lascia il numero"}
         </button>
 
         {/* PROSEGUI COMUNQUE */}

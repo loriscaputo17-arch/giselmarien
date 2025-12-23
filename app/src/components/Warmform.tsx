@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { supabase } from "@/app/src/lib/supabase";
 
 export default function WarmForm() {
   const [step, setStep] = useState(1);
@@ -11,6 +12,29 @@ export default function WarmForm() {
     phone: "",
     email: "",
   });
+
+  const submitForm = async () => {
+    const { error } = await supabase
+      .from("leads")
+      .insert([
+        {
+          event_type: form.eventType,
+          timing: form.timing,
+          name: form.name,
+          phone: form.phone,
+          email: form.email,
+        },
+      ]);
+
+    if (error) {
+      console.error(error);
+      alert("Errore durante l'invio. Riprova.");
+      return;
+    }
+
+    setStep(6); 
+  };
+
 
   return (
     <section className="md:py-40 py-20 bg-sand-100 relative overflow-hidden md:flex items-center">
@@ -160,6 +184,7 @@ export default function WarmForm() {
               />
 
               <button
+                onClick={submitForm}
                 className="w-full rounded-full bg-[#343026] text-[#e4e2dd] px-6 py-4 text-xs uppercase tracking-[0.18em] hover:opacity-90 transition cursor-pointer"
               >
                 Invia richiesta
@@ -168,6 +193,17 @@ export default function WarmForm() {
               <p className="text-xs text-ink-500 leading-relaxed max-w-sm mx-auto">
                 Ti ricontatteremo entro poche ore via WhatsApp
                 per capire se e come lavorare insieme.
+              </p>
+            </div>
+          )}
+
+          {step === 6 && (
+            <div className="space-y-6 text-center">
+              <h2 className="text-2xl font-light">
+                Richiesta inviata
+              </h2>
+              <p className="text-xs text-ink-500 max-w-sm mx-auto leading-relaxed">
+                Grazie. Ti contatteremo a breve per approfondire il progetto.
               </p>
             </div>
           )}
