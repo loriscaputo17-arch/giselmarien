@@ -84,12 +84,6 @@ export default function Navbar() {
         <Link href="/approach" onClick={() => setOpen(false)}>
           Approach
         </Link>
-        <Link href="/projects" onClick={() => setOpen(false)}>
-          Projects
-        </Link>
-        <Link href="/collaborations" onClick={() => setOpen(false)}>
-          Collaborations
-        </Link>
         <Link href="/contact" onClick={() => setOpen(false)}>
           Contact
         </Link>
