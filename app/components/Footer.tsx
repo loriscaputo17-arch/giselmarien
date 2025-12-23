@@ -127,7 +127,7 @@ export default function Footer() {
         {/* BOTTOM */}
         <div className="mt-32 pt-8 border-t border-[#e4e2dd]/20 flex flex-col md:flex-row justify-between gap-6 text-xs opacity-70">
           <p>© {new Date().getFullYear()} Gisel Marién</p>
-          <p>Artistic Production House · Made in Italy</p>
+          <p>Artistic Production Studio · Made in Italy</p>
         </div>
 
       </div>

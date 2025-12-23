@@ -23,7 +23,7 @@ export default function Home() {
         <div className="relative z-10 max-w-2xl mx-auto px-6 text-center space-y-10">
 
           <p className="text-xs uppercase tracking-[0.22em] text-ink-500">
-            Artistic Production House
+            Artistic Production Studio
           </p>
 
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-[0.95]">

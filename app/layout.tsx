@@ -4,8 +4,8 @@ import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 
 export const metadata = {
-  title: "Gisel Marién — Artistic Production House",
-  description: "Artistic Production House for Contemporary Events",
+  title: "Gisel Marién — Artistic Production Studio",
+  description: "Artistic Production Studio for Contemporary Events",
 };
 
 export default function RootLayout({
