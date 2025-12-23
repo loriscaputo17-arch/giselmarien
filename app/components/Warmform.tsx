@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { supabase } from "@/app/src/lib/supabase";
+import { supabase } from "@/app/lib/supabase";
 
 export default function WarmForm() {
   const [step, setStep] = useState(1);

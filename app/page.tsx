@@ -236,25 +236,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA FINALE */}
-      <section className="py-40 bg-sand-50">
-        <div className="max-w-4xl mx-auto px-6 text-center space-y-10">
-          <h2 className="text-3xl md:text-4xl font-light tracking-tight">
+      <section className="py-28 bg-sand-50">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+
+          <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-4">
             Raccontaci cosa stai immaginando
           </h2>
 
-          <p className="text-ink-700 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-ink-700 leading-relaxed max-w-xl mx-auto mb-8">
             Non serve avere tutto chiaro.
-            Basta un’intenzione.
-            Il resto lo costruiamo insieme.
+            Basta un’intenzione iniziale.
           </p>
 
-          <Link
-            href="#form"
-            className="inline-block rounded-full border border-sand-300 px-8 py-4 text-xs uppercase tracking-[0.18em] hover:bg-sand-200 transition"
-          >
-            Inizia da qui
-          </Link>
+          <div className="flex items-center justify-center gap-4">
+            <span className="block w-8 h-px bg-ink/40" />
+            <Link
+              href="#form"
+              className="text-xs uppercase tracking-[0.22em] hover:opacity-60 transition"
+            >
+              Inizia da qui
+            </Link>
+            <span className="block w-8 h-px bg-ink/40" />
+          </div>
+
         </div>
       </section>
 
