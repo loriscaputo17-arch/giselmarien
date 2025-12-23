@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Warmform from "@/app/src/components/Warmform";
-import PhoneGate from "@/app/src/components/PhoneGate";
+import Warmform from "@/app/components/Warmform";
+import PhoneGate from "@/app/components/PhoneGate";
 
 export default function Home() {
   return (

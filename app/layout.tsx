@@ -1,7 +1,7 @@
 // src/app/layout.tsx
 import "./globals.css";
-import Navbar from "@/app/src/components/Navbar";
-import Footer from "@/app/src/components/Footer";
+import Navbar from "@/app/components/Navbar";
+import Footer from "@/app/components/Footer";
 
 export const metadata = {
   title: "Gisel Marién — Artistic Production House",

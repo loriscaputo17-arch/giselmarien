@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { supabase } from "@/app/src/lib/supabase";
+import { supabase } from "@/app/lib/supabase";
 
 export default function Footer() {
   const [phone, setPhone] = useState("");

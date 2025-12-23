@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { supabase } from "@/app/src/lib/supabase";
+import { supabase } from "@/app/lib/supabase";
 
 export default function PhoneGate() {
   const [open, setOpen] = useState(false);
