@@ -42,7 +42,7 @@ export default function WarmForm() {
       <div className="md:max-w-xl mx-auto md:px-6 relative z-10">
 
         <p className="text-xs uppercase tracking-[0.22em] text-ink-500 mb-8 text-center">
-          Raccontaci il tuo evento
+          Raccontaci la tua richiesta
         </p>
 
         <div className="bg-sand-50 rounded-[32px] p-10 shadow-[0_10px_40px_rgba(0,0,0,0.05)] space-y-10">
@@ -86,7 +86,7 @@ export default function WarmForm() {
               <input
                 type="text"
                 placeholder="Es. primavera 2025 / data da definire"
-                className="w-[30vw] rounded-full px-6 py-4 bg-white focus:outline-none focus:ring-1 focus:ring-sand-400"
+                className="md:w-[30vw] w-full rounded-full px-6 py-4 bg-white focus:outline-none focus:ring-1 focus:ring-sand-400"
                 onChange={e => setForm({ ...form, timing: e.target.value })}
               />
 
@@ -117,7 +117,7 @@ export default function WarmForm() {
               <input
                 type="text"
                 placeholder="Nome e cognome"
-                className="w-[30vw] rounded-full px-6 py-4 bg-white focus:outline-none focus:ring-1 focus:ring-sand-400"
+                className="md:w-[30vw] w-full rounded-full px-6 py-4 bg-white focus:outline-none focus:ring-1 focus:ring-sand-400"
                 onChange={e => setForm({ ...form, name: e.target.value })}
               />
 
@@ -148,7 +148,7 @@ export default function WarmForm() {
               <input
                 type="tel"
                 placeholder="Telefono (WhatsApp)"
-                className="w-[30vw] rounded-full px-6 py-4 bg-white focus:outline-none focus:ring-1 focus:ring-sand-400"
+                className="md:w-[30vw] w-full rounded-full px-6 py-4 bg-white focus:outline-none focus:ring-1 focus:ring-sand-400"
                 onChange={e => setForm({ ...form, phone: e.target.value })}
               />
 

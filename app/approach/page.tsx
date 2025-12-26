@@ -63,7 +63,7 @@ export default function Manifesto() {
           {/* RIGHT */}
           <div className="md:col-span-8 space-y-8 text-ink-700 leading-relaxed">
             <p>
-              Gisel Marén nasce dal desiderio di restituire
+              Gisel Marién nasce dal desiderio di restituire
               significato agli eventi contemporanei.
               Non come elementi decorativi,
               ma come sistemi di gesti, forme e materiali

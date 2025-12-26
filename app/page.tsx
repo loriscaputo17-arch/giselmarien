@@ -82,7 +82,7 @@ export default function Home() {
             </h2>
 
             <p className="text-ink-700 leading-relaxed">
-              Casa di produzione artistica dedicata alla progettazione
+              Produzione artistica dedicata alla progettazione
               di oggetti, rituali e allestimenti per eventi contemporanei.
               Ogni progetto nasce da un’intenzione precisa.
             </p>

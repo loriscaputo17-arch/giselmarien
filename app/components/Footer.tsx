@@ -62,7 +62,7 @@ export default function Footer() {
               <button
                 type="submit"
                 onClick={submitPhone}
-                className="rounded-full px-6 py-3 text-xs uppercase tracking-[0.18em] bg-[#e4e2dd] text-[#343026] hover:opacity-90 transition"
+                className="cursor-pointer rounded-full px-6 py-3 text-xs uppercase tracking-[0.18em] bg-[#e4e2dd] text-[#343026] hover:opacity-90 transition"
               >
                 Iscriviti
               </button>
@@ -88,12 +88,60 @@ export default function Footer() {
               <p className="text-xs uppercase tracking-[0.18em]">
                 Social
               </p>
+
               <ul className="space-y-2 text-sm opacity-90">
-                <li>Instagram</li>
-                <li>TikTok</li>
-                <li>Email</li>
-                <li>WhatsApp</li>
-                <li>Facebook</li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/giselmarienstudio/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-70 transition"
+                  >
+                    Instagram
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://www.tiktok.com/@gisel.marien"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-70 transition"
+                  >
+                    TikTok
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="mailto:giselmarienstudio@gmail.com"
+                    className="hover:opacity-70 transition"
+                  >
+                    Email
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://wa.me/393478655415"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-70 transition"
+                  >
+                    WhatsApp
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-70 transition"
+                  >
+                    Facebook
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -115,8 +163,8 @@ export default function Footer() {
                 Support
               </p>
               <ul className="space-y-2 text-sm opacity-90">
-                <li>hello@giselmarien.com</li>
-                <li>WhatsApp · +39 347 477 4701</li>
+                <li className="break-all">giselmarienstudio@gmail.com</li>
+                <li>WhatsApp · +39 347 86 55 415</li>
                 <li>Italy — Worldwide</li>
               </ul>
             </div>

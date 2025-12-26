@@ -45,7 +45,7 @@ export default function PhoneGate() {
 
         <img
           src="/logotext.png"
-          alt="Gisel Marén"
+          alt="Gisel Marién"
           className="mx-auto w-[160px]"
         />
 
@@ -56,13 +56,12 @@ export default function PhoneGate() {
         <h2 className="text-2xl font-light leading-tight">
           Preferisci essere
           <br />
-          ricontattata?
+          ricontattato/a?
         </h2>
 
         <p className="text-ink-700 leading-relaxed text-sm">
-          Lasciaci il tuo numero.
-          Ti scriveremo su WhatsApp entro poche ore
-          per capire se e come lavorare insieme.
+          Lascia il tuo numero di telefono.
+          Ti scriveremo su WhatsApp per prendere in carico le tue richieste.
         </p>
 
         <input
