@@ -192,7 +192,7 @@ export default function WarmForm() {
 
               <p className="text-xs text-ink-500 leading-relaxed max-w-sm mx-auto">
                 Ti ricontatteremo entro poche ore via WhatsApp
-                per capire se e come lavorare insieme.
+                per prendere in carico la tua richiesta.
               </p>
             </div>
           )}

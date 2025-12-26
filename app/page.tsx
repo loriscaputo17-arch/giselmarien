@@ -41,7 +41,7 @@ export default function Home() {
             href="#form"
             className="inline-block rounded-full border border-sand-300 px-8 py-4 text-xs uppercase tracking-[0.18em] hover:bg-sand-200 transition"
           >
-            Prenota un incontro
+            Prenota un appuntamento
           </Link>
 
           <p className="text-[10px] uppercase tracking-[0.18em] text-ink-500">

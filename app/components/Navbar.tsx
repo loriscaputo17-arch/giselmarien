@@ -27,7 +27,9 @@ export default function Navbar() {
           {/* LEFT – desktop menu */}
           <div className="hidden md:flex font-bold items-center gap-6 text-xs uppercase tracking-[0.18em]">
             <Link href="/approach">Manifesto</Link>
+            <Link href="/#form">Prenota</Link>
           </div>
+
 
           {/* MOBILE LOGO */}
           <Link
@@ -49,6 +51,7 @@ export default function Navbar() {
           {/* RIGHT – desktop menu */}
           <div className="hidden md:flex font-bold items-center gap-6 text-xs uppercase tracking-[0.18em]">
             <Link href="/contact">Contatti</Link>
+            <Link href="https://www.instagram.com/giselmarienstudio/">Instagram</Link>
           </div>
 
           <button
@@ -80,13 +83,20 @@ export default function Navbar() {
     ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none backdrop-blur-0"}
   `}
 >
-
+        <Link href="#form" onClick={() => setOpen(false)}>
+          Prenota
+        </Link>
         <Link href="/approach" onClick={() => setOpen(false)}>
-          Approach
+          Manifesto
         </Link>
         <Link href="/contact" onClick={() => setOpen(false)}>
-          Contact
+          Contatti
         </Link>
+
+        <Link href="https://www.instagram.com/giselmarienstudio/" onClick={() => setOpen(false)}>
+          Instagram
+        </Link>
+
       </div>
     </>
   );
