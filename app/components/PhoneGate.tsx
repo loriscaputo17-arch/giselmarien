@@ -81,7 +81,7 @@ export default function PhoneGate() {
 
         /* logo */
         .pg-logo {
-          width: 140px; margin: 0 auto 28px;
+          width: 140px; margin: 0 auto 1rem;
           display: block;
         }
 
@@ -210,12 +210,13 @@ export default function PhoneGate() {
         /* skip */
         .pg-skip {
           font-family: 'Jost', sans-serif;
-          font-size: 9px; font-weight: 300;
+          font-size: 14px; font-weight: 400;
           letter-spacing: 0.28em; text-transform: uppercase;
           color: rgba(90,70,40,0.4);
           background: none; border: none; cursor: pointer;
           transition: color .2s ease;
           padding: 0;
+          margin-bottom: 2rem;
         }
         .pg-skip:hover { color: rgba(90,70,40,0.75); }
 
@@ -262,6 +263,10 @@ export default function PhoneGate() {
 
           {/* Logo */}
           <img src="/logotext.png" alt="Gisel Marién" className="pg-logo" />
+
+          <button onClick={dismiss} className="pg-skip">
+                ESPLORA IL SITO
+           </button>
 
           {/* Ornamental divider */}
           <div className="pg-ornament">
@@ -324,9 +329,7 @@ export default function PhoneGate() {
               </button>
 
               {/* Skip */}
-              <button onClick={dismiss} className="pg-skip">
-                Esplora il sito prima
-              </button>
+              
             </>
           ) : (
             <div className="pg-success">
