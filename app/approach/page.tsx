@@ -1,4 +1,21 @@
 import Link from "next/link";
+// src/app/approach/page.tsx — aggiungere in cima al file esistente
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Il Nostro Approccio",
+  description:
+    "Scopri il metodo di Gisel Marién: ascolto, progettazione, produzione artigianale e consegna. Ogni bomboniera e allestimento nasce da un'intenzione precisa.",
+  alternates: {
+    canonical: "/approach",
+  },
+  openGraph: {
+    title: "Il Nostro Approccio — Gisel Marién Atelier",
+    description:
+      "Dal primo incontro alla consegna finale: scopri come lavoriamo e perché ogni progetto è unico.",
+    url: "https://giselmarien.com/approach",
+  },
+};
 
 export default function Manifesto() {
   return (

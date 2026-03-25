@@ -1,7 +1,7 @@
 // src/app/sitemap.ts
 import { MetadataRoute } from "next";
 
-const BASE_URL = "https://www.giselmarienstudio.com";
+const BASE_URL = "https://giselmarien.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -21,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${BASE_URL}/contact`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.9,
     },
     {
       url: `${BASE_URL}/privacy`,
@@ -35,5 +35,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.2,
     },
+    // Pagine future — decommentare quando create
+    // {
+    //   url: `${BASE_URL}/blog`,
+    //   lastModified: new Date(),
+    //   changeFrequency: "weekly",
+    //   priority: 0.8,
+    // },
+    // {
+    //   url: `${BASE_URL}/blog/bomboniere-matrimonio-campania`,
+    //   lastModified: new Date(),
+    //   changeFrequency: "monthly",
+    //   priority: 0.7,
+    // },
   ];
 }

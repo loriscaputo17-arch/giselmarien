@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Warmform from "@/app/components/Warmform";
+import ContactForm from "@/app/components/ContactForm";
 
 export default function Home() {
   return (
@@ -246,13 +247,15 @@ export default function Home() {
                 <span key={s} className="hero-pill">{s}</span>
               ))}
             </div>
-            <Link href="#form" className="hero-cta">
+            <Link href="#contactform" className="hero-cta">
               Prenota una consulenza
               <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5h12M8 1l4 4-4 4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </Link>
             <p className="hero-footer">Italia & Internazionale · Su misura · Solo su appuntamento</p>
           </div>
         </section>
+
+        <div id="contactform"><ContactForm /></div>
 
         {/* ── NUMBERS ── */}
         <div className="numbers">
@@ -270,9 +273,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-
-        {/* ── FORM ── */}
-        <div id="form"><Warmform /></div>
 
         <div className="gallery">
           <div className="gallery-track">
@@ -307,6 +307,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <div id="form"><Warmform /></div>
+
 
         {/* ── WHAT WE DO ── */}
         <section className="what">
