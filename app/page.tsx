@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Warmform from "@/app/components/Warmform";
-import PhoneGate from "@/app/components/PhoneGate";
 
 export default function Home() {
   return (
@@ -226,8 +225,6 @@ export default function Home() {
 
         @media (max-width: 600px) { .hero-content { padding: 100px 24px; } }
       `}</style>
-
-      <PhoneGate />
 
       <main>
 
